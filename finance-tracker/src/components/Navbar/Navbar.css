@@ -1,0 +1,33 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#365F70;
+    padding: 10px;
+    height: 70px;
+    width: 100%;
+    color: white;
+}
+nav h1{
+    font-size: 37px;
+}
+nav ul {
+    display: flex;
+    padding-right: 50px;
+    list-style-type: none;
+    gap: 20px;
+}
+ nav ul li .NavLink{
+    border: none;
+    border-radius: 10px;
+     text-decoration: none;
+     color: white;
+     padding: 10px 20px;
+     font-weight: 600;
+}
+.active{
+    background-color: #08086C;
+}
+nav ul li :not(.active):hover{
+    background-color: #08086C;
+}
