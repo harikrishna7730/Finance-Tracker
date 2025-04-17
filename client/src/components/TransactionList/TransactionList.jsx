@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import "./TransactionList.css";
+import toast, { Toaster } from 'react-hot-toast';
 
 function TransactionList() {
   const [transactions, setTransactions] = useState([]);
@@ -18,7 +19,14 @@ function TransactionList() {
   };
    // Delete a transaction
    const handleDelete = async (id) => {
-    if (window.confirm("Are you sure you want to delete this transaction?")) {
+    if (toast((t) => (
+      <span>
+        Are you sure want to <b>delete</b>
+        <button style={{padding:"0.23rem 0.46rem",fontWeight:"500",marginLeft:"6px"}} onClick={() => toast.dismiss(t.id)}>
+          Yes
+        </button>
+      </span>
+    ))) {
       try {
         await axios.delete(`https://finance-tracker-r6ea.onrender.com/api/transactions/${id}`);
         fetchTransactions();  // refresh list after delete
@@ -54,6 +62,7 @@ function TransactionList() {
           </div>
         ))
       )}
+       <Toaster/>
     </div>
   );
 }

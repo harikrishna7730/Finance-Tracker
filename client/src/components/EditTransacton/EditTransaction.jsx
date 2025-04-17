@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import "./EditTransaction.css";
+import toast, { Toaster } from 'react-hot-toast';
 
 function EditTransaction() {
   const { id } = useParams();
@@ -38,7 +39,7 @@ function EditTransaction() {
     e.preventDefault();
     try {
       await axios.put(`https://finance-tracker-r6ea.onrender.com/api/transactions/${id}`, formData);
-      alert("Transaction updated successfully!");
+      toast.success("Transaction updated successfully!");
       navigate("/transactionlist");
     } catch (error) {
       console.error("Error updating transaction:", error);
@@ -87,6 +88,7 @@ function EditTransaction() {
 
         <button type="submit">Update Transaction</button>
       </form>
+      <Toaster/>
     </div>
   );
 }

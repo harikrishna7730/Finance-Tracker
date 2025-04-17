@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import "./AddTransaction.css"
+import toast, { Toaster } from 'react-hot-toast';
 
 function AddTransaction() {
   const [title, setTitle] = useState('');
@@ -50,15 +51,19 @@ function AddTransaction() {
         await axios.put(`https://finance-tracker-r6ea.onrender.com/api/transactions/${id}`, {
           title, amount, category
         });
-        alert('Transaction Updated!');
+        toast.success("Transaction Updated")
       } else {
         // Add new transaction
         await axios.post('https://finance-tracker-r6ea.onrender.com/api/transactions', {
           title, amount, category
         });
-        alert('Transaction Added!');
+        // alert('Transaction Added!');
+        toast.success('Transaction Added Successfully')
+
       }
-      navigate('/');
+      setTimeout(()=>{
+        navigate('/');
+      },3000)
     } catch (err) {
       console.error(err);
       setError("Something went wrong. Please try again.");
@@ -92,6 +97,7 @@ function AddTransaction() {
       />
       <button type="submit">{id ? 'Update Transaction' : 'Add Transaction'}</button>
     </form>
+    <Toaster/>
     </div>
   );
 }
