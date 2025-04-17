@@ -16,7 +16,7 @@ function EditTransaction() {
   // Fetch transaction by id
   const fetchTransactionById = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/transactions/${id}`);
+      const response = await axios.get(`https://finance-tracker-r6ea.onrender.com/api/transactions/${id}`);
       setFormData(response.data);
     } catch (error) {
       console.error("Error fetching transaction details:", error);
@@ -37,7 +37,7 @@ function EditTransaction() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/transactions/${id}`, formData);
+      await axios.put(`https://finance-tracker-r6ea.onrender.com/api/transactions/${id}`, formData);
       alert("Transaction updated successfully!");
       navigate("/transactionlist");
     } catch (error) {

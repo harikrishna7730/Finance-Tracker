@@ -14,7 +14,7 @@ function AddTransaction() {
   // Fetch transaction if id exists (for editing)
   useEffect(() => {
     if (id) {
-      axios.get(`http://localhost:5000/api/transactions/${id}`)
+      axios.get(`https://finance-tracker-r6ea.onrender.com/api/transactions/${id}`)
         .then(res => {
           const t = res.data;
           setTitle(t.title);
@@ -47,13 +47,13 @@ function AddTransaction() {
     try {
       if (id) {
         // Update transaction
-        await axios.put(`http://localhost:5000/api/transactions/${id}`, {
+        await axios.put(`https://finance-tracker-r6ea.onrender.com/api/transactions/${id}`, {
           title, amount, category
         });
         alert('Transaction Updated!');
       } else {
         // Add new transaction
-        await axios.post('http://localhost:5000/api/transactions', {
+        await axios.post('https://finance-tracker-r6ea.onrender.com/api/transactions', {
           title, amount, category
         });
         alert('Transaction Added!');

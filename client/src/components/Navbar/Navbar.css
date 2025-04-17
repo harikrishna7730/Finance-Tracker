@@ -1,156 +1,94 @@
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color:#8461D4;
-    height: 80px;
-    width: 100%;
-    color: white;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: #8461D4;
+  color: white;
 }
-nav h1{
-    font-size: 37px;
+
+nav h1 {
+  font-size: 24px;
 }
-nav ul {
-    display: flex;
-    list-style-type: none;
-    gap: 20px;
-}
- nav ul li .NavLink{
-    border: none;
-    border-radius: 10px;
-     text-decoration: none;
-     color: white;
-     padding: 10px 20px;
-     font-weight: 600;
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
 }
 .active{
-    background-color: #08086C;
+  background-color: #08086C;
 }
 nav ul li :not(.active):hover{
-    background-color: #08086C;
+  background-color: #08086C;
 }
 
-/* .menu{
-    display: none;
-    position: absolute;
-    top: 0.75rem;
-    right: 0.5rem;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 2.25rem;
-    height: 2rem;
-}
-.menu span{
-    width: 0.4rem;
-    background:black;
-    border-radius: 0.2rem;
-    width: 100%;
+.NavLink {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 0.25rem 1rem;
+  border-radius: 8px;
 }
 
-@media (max-width:600px){
-    nav .menu{
-        display: flex;
-    }
-    nav{
-        flex-direction: column;
-        align-items: start;
-    }
-    nav ul{
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-bottom: 0.25rem;
-    }
-    nav ul li{
-        width: 100%;
-        text-align: center;
-    }
-    nav ul li .NavLink{
-        margin: 0.2rem 0.5 rem;
-    }
-    nav ul .open{
-        display: flex;
-    }
-} */
+.NavLink.active {
+  font-weight: bold;
+}
 
-/* Navbar base styles */
-/* nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 1rem;
-    background: #f4f4f4;
-  } */
-  
-  nav ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li .NavLink {
-    text-decoration: none;
-    color: white;
-  }
-  
-  nav ul li .NavLink:hover {
-    /* background: #8461D4; */
-    color: white;
-  }
-  
-  /* Hamburger menu */
+.menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* ✅ Responsive for max-width 600px */
+
+@media (max-width: 600px) {
   .menu {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    top: 0.75rem;
-    right: 0.5rem;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 2.25rem;
-    height: 2rem;
-    cursor: pointer;
+    display: flex;
   }
-  
-  .menu span {
-    height: 0.4rem;
-    background: white;
-    border-radius: 0.2rem;
+
+  ul {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #1e1e2f;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  ul.open {
+    transform: translateX(0);
+  }
+
+  ul li {
     width: 100%;
   }
-  
-  /* Responsive styles */
-  @media (max-width: 600px) {
-    nav {
-      flex-direction: column;
-      align-items: start;
-    }
-  
-    nav .menu {
-      display: flex;
-    }
-  
-    nav ul {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      margin-bottom:0.25rem;
-    }
-  
-    nav ul .open {
-      display: flex;
-    }
-  
-    nav ul li {
-      width: 100%;
-      text-align: center;
-      /* padding: 0.5rem 0; */
-    }
-  
-    nav ul li .NavLink {
-      margin: 0.2rem 0.5rem;
-    }
+
+  .NavLink {
+    display: block;
+    width: 100%;
+    font-size: 20px;
   }
-  
+
+  nav {
+    position: relative;
+  }
+}

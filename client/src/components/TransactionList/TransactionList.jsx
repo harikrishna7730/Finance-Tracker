@@ -10,7 +10,7 @@ function TransactionList() {
 
   const fetchTransactions = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/transactions');
+      const response = await axios.get('https://finance-tracker-r6ea.onrender.com/api/transactions');
       setTransactions(response.data);
     } catch (error) {
       console.error('Error fetching transactions:', error);
@@ -20,7 +20,7 @@ function TransactionList() {
    const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this transaction?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/transactions/${id}`);
+        await axios.delete(`https://finance-tracker-r6ea.onrender.com/api/transactions/${id}`);
         fetchTransactions();  // refresh list after delete
       } catch (error) {
         console.error('Error deleting transaction:', error);

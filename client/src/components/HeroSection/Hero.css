@@ -81,11 +81,8 @@
         z-index: -2;
     }
     .carousel-container{
-      height: 100px;
+      display: none;
     }
-    .carousel{
-      position: relative;
-      top: 90vw;
-    }
+   
 
   } 
