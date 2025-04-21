@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-
-
- .All-transactions-list-container{
-=======
 .All-transactions-list-container{
->>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
-<<<<<<< HEAD
     margin-top: 100px;
     height: 500px;
     
@@ -25,12 +18,6 @@
   }
   
   .All-trans-list-items{
-=======
-    height: 500px;
-    
-}
-.All-trans-list-items{
->>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
     border: none;
     border-radius: 0.45rem;
     display: flex;
@@ -43,12 +30,7 @@
     border-radius: 0.66rem;
 }
 
-<<<<<<< HEAD
   .All-trans-list-items li{
-=======
-
-.All-trans-list-items li{
->>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
     transition: background 0.3s ease;
     border:none;
     border-radius: 0.65rem;
@@ -62,7 +44,6 @@
     color: white;
     background-color: #08086C;
 }
-<<<<<<< HEAD
 
   
   .All-trans-list-items li:hover {
@@ -104,21 +85,3 @@
     }
   }
   
-=======
-.All-trans-list-items li:hover{
-    background:#8461D4;
-}
-.tran-list-links{
-   text-decoration: none;
-   color: white;
-}
-
-
-
-@media (max-width: 600px) {
-   .All-transactions-list-container{
-    display: none;
-   }
-  }
-  
->>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
