@@ -26,10 +26,7 @@ function Carousel() {
 
   return (
     <>
-<<<<<<< HEAD
     <div className='main-box'>
-=======
->>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
     <div className='Hero-container'>
       <div className='hero-content'>
       <h1>Welcome to Finance Tracker — Your Personal <span style={{color:"#8461D4"}}>Finance Tracker!</span></h1>
@@ -37,28 +34,17 @@ function Carousel() {
       <button className='Hero-explore-btn' onClick={()=>navigate("/addtransaction")}>Add Transaction Now <span>→</span></button>
       </div>
       <div className='hero-img'>
-<<<<<<< HEAD
         <img src={homeMainImg} alt=""  height={480} width={480}/>
-=======
-        <img src={homeMainImg} alt=""  height={500} width={500}/>
->>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
       </div>
     </div>
     <div className='carousel-container'>
     <div className="carousel">
-<<<<<<< HEAD
       <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`}  />
-=======
-      <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
->>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
       <button onClick={goToPrev} className="nav-btn left">❮</button>
       <button onClick={goToNext} className="nav-btn right">❯</button>
     </div>
     </div>
-<<<<<<< HEAD
     </div>
-=======
->>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
     </>
   );
 }

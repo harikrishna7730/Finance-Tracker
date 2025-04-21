@@ -2,14 +2,10 @@
     font-family: "Poppins";
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
     box-sizing: border-box;
     font-size: calc(14px + (26-14)* ((100vw-300px)/ (1600-300)));
 }
 .App{
     height: 100%;
     width: 100%;
-=======
-    font-size: calc(14px + (26-14)* ((100vw-300px)/ (1600-300)));
->>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
 }
