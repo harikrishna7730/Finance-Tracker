@@ -7,7 +7,11 @@ function Charts() {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
+<<<<<<< HEAD
     axios.get('http://localhost:5000/api/transactions')
+=======
+    axios.get('https://finance-tracker-r6ea.onrender.com/api/transactions')
+>>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
       .then(res => setTransactions(res.data));
   }, []);
 

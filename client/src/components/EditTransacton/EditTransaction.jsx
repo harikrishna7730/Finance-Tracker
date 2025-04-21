@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import "./EditTransaction.css";
+<<<<<<< HEAD
+=======
+import toast, { Toaster } from 'react-hot-toast';
+>>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
 
 function EditTransaction() {
   const { id } = useParams();
@@ -16,7 +20,11 @@ function EditTransaction() {
   // Fetch transaction by id
   const fetchTransactionById = async () => {
     try {
+<<<<<<< HEAD
       const response = await axios.get(`http://localhost:5000/api/transactions/${id}`);
+=======
+      const response = await axios.get(`https://finance-tracker-r6ea.onrender.com/api/transactions/${id}`);
+>>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
       setFormData(response.data);
     } catch (error) {
       console.error("Error fetching transaction details:", error);
@@ -37,8 +45,13 @@ function EditTransaction() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+<<<<<<< HEAD
       await axios.put(`http://localhost:5000/api/transactions/${id}`, formData);
       alert("Transaction updated successfully!");
+=======
+      await axios.put(`https://finance-tracker-r6ea.onrender.com/api/transactions/${id}`, formData);
+      toast.success("Transaction updated successfully!");
+>>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
       navigate("/transactionlist");
     } catch (error) {
       console.error("Error updating transaction:", error);
@@ -87,6 +100,10 @@ function EditTransaction() {
 
         <button type="submit">Update Transaction</button>
       </form>
+<<<<<<< HEAD
+=======
+      <Toaster/>
+>>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
     </div>
   );
 }

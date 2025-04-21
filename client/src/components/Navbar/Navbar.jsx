@@ -7,6 +7,7 @@ const Navbar = () => {
   return (
    <nav>
     <h1>Finance Tracker</h1>
+<<<<<<< HEAD
     {
       menuOpen ? 
   
@@ -14,11 +15,17 @@ const Navbar = () => {
  
    :
     <div className='menu' onClick={()=>setMenuOpen(true)}>
+=======
+    <div className='menu' onClick={()=>setMenuOpen(!menuOpen)}>
+>>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
       <span></span>
       <span></span>
       <span></span>
     </div>
+<<<<<<< HEAD
      }
+=======
+>>>>>>> d2d481ea9888fea317d1a3a15b1035ef09364b9a
     <ul className={menuOpen ? "open": ""}>
         <li><NavLink to={"/"} className="NavLink">Home</NavLink></li>
         <li><NavLink to={"/addtransaction"} className="NavLink">Add Transactions</NavLink></li>
