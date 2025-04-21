@@ -1,0 +1,89 @@
+
+
+ .All-transactions-list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+    height: 500px;
+    
+}
+  
+  .All-transactions-list-container h1 {
+    font-size: 48px;
+    color: #08086C;
+    padding: 20px;
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  .All-trans-list-items{
+    border: none;
+    border-radius: 0.45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding:  2rem 20rem;
+    background-color: #E4E5F0;
+    border-radius: 0.66rem;
+}
+
+  .All-trans-list-items li{
+    transition: background 0.3s ease;
+    border:none;
+    border-radius: 0.65rem;
+    margin: 1rem;
+    padding: 2rem;
+    width: 500px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background-color: #08086C;
+}
+
+  
+  .All-trans-list-items li:hover {
+    background-color: #6f4ecb;
+  }
+  .tran-list-links{
+    text-decoration: none;
+    color: white;
+ }
+  
+  /* Responsive styles for max-width 600px */
+  
+  @media (max-width: 600px) {
+    .All-transactions-list-container {
+        overflow: hidden;
+        height: 100dvh;
+      padding: 20px;
+    }
+  
+    .All-transactions-list-container h1 {
+      font-size: 30px;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .All-trans-list-items {
+      margin: 20px auto;
+      gap: 15px;
+    }
+     .All-trans-list-items{
+        background-color: white;
+     }
+  
+    .tran-list-links {
+      font-size: 16px;
+      padding: 12px 20px;
+      width: 90%;
+      text-align: center;
+    }
+  }
+  
